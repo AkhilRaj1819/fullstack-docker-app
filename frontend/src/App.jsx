@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api')
+    fetch('/api') // Use relative path to rely on proxy configuration
       .then((res) => res.text())
       .then((data) => setMessage(data))
       .catch((err) => console.error('Error fetching from backend:', err));
